@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"TheCamel";src:url("uploads/TheYearofTheCamel-Thin.otf") format("opentype");font-weight:100;font-display:swap}
+@font-face{font-family:"TheCamel";src:url("uploads/TheYearofTheCamel-ExtraLight.otf") format("opentype");font-weight:200;font-display:swap}
+@font-face{font-family:"TheCamel";src:url("uploads/TheYearofTheCamel-Light.otf") format("opentype");font-weight:300;font-display:swap}
+@font-face{font-family:"TheCamel";src:url("uploads/TheYearofTheCamel-Regular.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"TheCamel";src:url("uploads/TheYearofTheCamel-Medium.otf") format("opentype");font-weight:500;font-display:swap}
+@font-face{font-family:"TheCamel";src:url("uploads/TheYearofTheCamel-Bold.otf") format("opentype");font-weight:700;font-display:swap}
+@font-face{font-family:"TheCamel";src:url("uploads/TheYearofTheCamel-ExtraBold.otf") format("opentype");font-weight:800;font-display:swap}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes pulse{0%,100%{opacity:.25;transform:rotate(45deg) scale(.8)}50%{opacity:1;transform:rotate(45deg) scale(1.15)}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(50%)}}
+@keyframes rise{from{opacity:0;transform:translateY(60px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes lineGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+body{margin:0;background:#1f1620;color:#EFE6DA;font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#EFE6DA;text-decoration:none}
+a:hover{color:#D9A07A}
+*{box-sizing:border-box}
+</style>
+</helmet>
+
+<div id="berhyah-root" dir="rtl" lang="ar" style="position:relative;width:100%;overflow:hidden;background:#1f1620;direction:rtl">
+
+  <!-- HERO -->
+  <section style="position:relative;min-height:100vh;display:flex;flex-direction:column;overflow:hidden;background:#2a1f2b url('uploads/berhyah-background-2560x1440.png') center/cover no-repeat">
+    <sc-if value="{{ showVideo }}" hint-placeholder-val="{{ true }}">
+      <video src="uploads/Berhyah%20Background%20Animation.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7"></video>
+    </sc-if>
+    <div style="position:absolute;inset:0;background:#3E2419;mix-blend-mode:color;opacity:.9"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,22,32,.2),rgba(31,22,32,.85))"></div>
+    <div id="glow" style="position:absolute;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;background:radial-gradient(circle,rgba(217,160,122,.22),transparent 65%);pointer-events:none;left:50%;top:40%;transition:left .6s ease,top .6s ease"></div>
+
+    <nav style="position:relative;display:flex;justify-content:space-between;align-items:center;padding:28px clamp(20px,5vw,72px);z-index:2">
+      <div style="font-family:TheCamel,serif;font-size:44px;line-height:1">إرث</div>
+      <div style="display:flex;gap:28px;font-size:15px;letter-spacing:.02em">
+        <a href="#story">قصتنا</a>
+        <a href="#hoodie">المجموعة</a>
+        <a href="#join">تواصل</a>
+      </div>
+    </nav>
+
+    <div style="position:relative;z-index:2;flex:1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center;padding:0 clamp(20px,5vw,72px) 80px">
+      <div style="animation:rise 1.2s cubic-bezier(.2,.7,.2,1) both">
+        <div style="font-family:TheCamel,serif;font-size:clamp(150px,22vw,320px);line-height:.9;color:#EFE6DA">إرث</div>
+        <div style="font-size:clamp(22px,2.6vw,34px);font-weight:600;margin-top:18px;color:#D9A07A">إرثنا على عاتقنا</div>
+        <p style="max-width:460px;font-size:18px;line-height:1.9;font-weight:300;opacity:.85;margin:22px 0 34px">تصميم مستوحى من جمال الخط العربي الأصيل، يجمع بين انسيابية الحروف وقوة أشكالها.</p>
+        <a href="#story" style-hover="" style="display:inline-block;padding:16px 36px;border:1px solid #D9A07A;border-radius:999px;font-size:16px;background:#EFE6DA;color:#2a1a1c">اكتشف القصة</a>
+      </div>
+
+      <div style="position:relative;justify-self:center;width:min(380px,80vw);aspect-ratio:3/4;animation:bob 7s ease-in-out infinite">
+        <div style="position:absolute;inset:0;border-radius:999px 999px 18px 18px;background:#EFE6DA;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.45)">
+          <img src="uploads/pasted-1794274583564-0.png" alt="شعار إرث" style="position:absolute;inset:10% 8%;width:84%;height:80%;object-fit:contain;mix-blend-mode:multiply">
+        </div>
+        <div style="position:absolute;inset:-18px;border:1px solid rgba(217,160,122,.4);border-radius:999px 999px 26px 26px;animation:spin 40s linear infinite"></div>
+      </div>
+    </div>
+
+    <div style="position:relative;z-index:2;display:flex;gap:14px;align-items:center;justify-content:center;padding-bottom:32px;font-size:13px;letter-spacing:.2em;opacity:.7">
+      <span>الماضي</span><span style="width:8px;height:8px;background:#D9A07A;transform:rotate(45deg);animation:pulse 3s ease-in-out infinite"></span>
+      <span>الحاضر</span><span style="width:8px;height:8px;background:#D9A07A;transform:rotate(45deg);animation:pulse 3s ease-in-out .6s infinite"></span>
+      <span>المستقبل</span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div style="background:#EFE6DA;color:#2a1a1c;overflow:hidden;white-space:nowrap;padding:22px 0;border-block:1px solid #7A1518">
+    <div style="display:inline-block;animation:marquee 26s linear infinite;font-family:TheCamel,serif;font-size:56px;line-height:1">
+      <span style="padding:0 28px">إرثنا على عاتقنا</span><span style="color:#7A1518;padding:0 16px">◆</span><span style="padding:0 28px">إرثنا على عاتقنا</span><span style="color:#7A1518;padding:0 16px">◆</span><span style="padding:0 28px">إرثنا على عاتقنا</span><span style="color:#7A1518;padding:0 16px">◆</span><span style="padding:0 28px">إرثنا على عاتقنا</span><span style="color:#7A1518;padding:0 16px">◆</span>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section id="story" style="padding:clamp(80px,12vw,160px) clamp(20px,6vw,96px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,120px);align-items:start">
+    <div data-reveal="" style="opacity:0;transform:translateY(40px);transition:all 1s cubic-bezier(.2,.7,.2,1)">
+      <div style="font-size:14px;letter-spacing:.2em;color:#D9A07A;margin-bottom:20px">القصة</div>
+      <h2 style="font-family:TheCamel,serif;font-weight:400;font-size:clamp(48px,6vw,88px);line-height:1.05;margin:0 0 28px">النقاط الثلاث<br>تروي الرحلة</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:44px">
+      <div data-reveal="" style="opacity:0;transform:translateY(40px);transition:all 1s cubic-bezier(.2,.7,.2,1);border-inline-start:2px solid #7A1518;padding-inline-start:28px">
+        <div style="font-size:14px;color:#D9A07A;margin-bottom:10px">01 · الماضي</div>
+        <p style="font-size:19px;line-height:2;font-weight:300;margin:0;opacity:.9">النقاط الثلاث المتصلة ترمز إلى الماضي والحاضر والمستقبل، وامتداد حرف «ث» يشبه قارباً يحمل إرثنا في رحلة عبر الأجيال.</p>
+      </div>
+      <div data-reveal="" style="opacity:0;transform:translateY(40px);transition:all 1s cubic-bezier(.2,.7,.2,1) .15s;border-inline-start:2px solid #7A1518;padding-inline-start:28px">
+        <div style="font-size:14px;color:#D9A07A;margin-bottom:10px">02 · الحاضر</div>
+        <p style="font-size:19px;line-height:2;font-weight:300;margin:0;opacity:.9">تصميم مستوحى من جمال الخط العربي الأصيل، يجمع بين انسيابية الحروف وقوة أشكالها.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOODIE -->
+  <section id="hoodie" style="padding:0 clamp(20px,6vw,96px) clamp(80px,12vw,160px)">
+    <div data-reveal="" style="opacity:0;transform:translateY(40px);transition:all 1s cubic-bezier(.2,.7,.2,1);max-width:720px;margin-bottom:56px">
+      <div style="font-size:14px;letter-spacing:.2em;color:#D9A07A;margin-bottom:20px">المجموعة</div>
+      <h2 style="font-family:TheCamel,serif;font-weight:400;font-size:clamp(48px,6vw,88px);line-height:1.05;margin:0 0 24px">الطباعة على الأكتاف</h2>
+      <p style="font-size:18px;line-height:2;font-weight:300;margin:0;opacity:.85">وجاءت الطباعة على الأكتاف تجسيداً لعبارة «إرثنا على عاتقنا»، لأن الإرث مو مجرد شيء نلبسه، بل مسؤولية نحملها ونورّثها لمن بعدنا.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;align-items:end">
+      <div data-reveal="" style="opacity:0;transform:translateY(40px);transition:all 1.2s cubic-bezier(.2,.7,.2,1);overflow:hidden;border-radius:6px">
+        <img data-parallax="0.08" src="uploads/pasted-1794274592616-0.png" alt="الطباعة على الأكتاف" style="display:block;width:100%;height:auto;transform:scale(1.12)">
+      </div>
+      <div data-reveal="" style="opacity:0;transform:translateY(40px);transition:all 1.2s cubic-bezier(.2,.7,.2,1) .2s;overflow:hidden;border-radius:999px 999px 6px 6px;aspect-ratio:3/4">
+        <img data-parallax="-0.05" src="uploads/pasted-1794274577734-0.png" alt="شعار مطرّز على الصدر" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.15)">
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN -->
+  <section id="join" style="position:relative;padding:clamp(100px,14vw,180px) clamp(20px,6vw,96px);text-align:center;background:#2a1f2b url('uploads/berhyah-background-2560x1440.png') center/cover;border-top:1px solid rgba(217,160,122,.2)">
+    <div data-reveal="" style="opacity:0;transform:translateY(40px);transition:all 1s cubic-bezier(.2,.7,.2,1)">
+      <div style="font-family:TheCamel,serif;font-size:clamp(120px,16vw,220px);line-height:1">إرث</div>
+      <p style="font-size:20px;margin:18px auto 40px;max-width:520px;font-weight:300;line-height:1.9;opacity:.85">الإرث مسؤولية نحملها ونورّثها لمن بعدنا.</p>
+      <a href="#join" style="display:inline-block;padding:16px 40px;border-radius:999px;background:#7A1518;color:#EFE6DA;font-size:16px">تواصل معنا</a>
+    </div>
+  </section>
+
+  <footer style="display:flex;justify-content:space-between;padding:28px clamp(20px,6vw,96px);font-size:13px;opacity:.6;border-top:1px solid rgba(239,230,218,.12)">
+    <span style="font-family:TheCamel,serif;font-size:20px">إرث</span>
+    <span>إرثنا على عاتقنا</span>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900},&quot;showVideo&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = document.getElementById('berhyah-root');
+    if (!root) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    root.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+    const glow = document.getElementById('glow');
+    const hero = root.querySelector('section');
+    if (hero && glow) {
+      hero.addEventListener('mousemove', (ev) => {
+        const r = hero.getBoundingClientRect();
+        glow.style.left = (ev.clientX - r.left) + 'px';
+        glow.style.top = (ev.clientY - r.top) + 'px';
+      });
+    }
+    const pars = root.querySelectorAll('[data-parallax]');
+    this._onScroll = () => {
+      pars.forEach((img) => {
+        const box = img.parentElement.getBoundingClientRect();
+        const k = parseFloat(img.dataset.parallax);
+        const c = (box.top + box.height / 2 - window.innerHeight / 2);
+        img.style.transform = 'scale(1.15) translateY(' + (c * k).toFixed(1) + 'px)';
+      });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+  }
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+  }
+  renderVals() {
+    return { showVideo: this.props.showVideo ?? true };
+  }
+}
+
+</script>
+</body>
+</html>
